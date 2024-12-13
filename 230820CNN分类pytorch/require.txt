@@ -1,0 +1,14 @@
+pip install seaborn -i https://pypi.tuna.tsinghua.edu.cn/simple
+matplotlib
+torch ==1.9
+numpy
+matplotlib
+
+
+
+对于一维卷积操作 nn.Conv1d，
+输入数据的维度应为 (batch_size, input_channels, input_length)，
+其中 input_length 表示输入序列的长度。而卷积核的大小 kernel_size 应该小于等于 input_length （特征数）。
+
+数据集中的样本数量较少：如果数据集中的样本数量太少，导致 input_length 的值小于 2，
+那么无法使用 kernel_size 为 2 的卷积核进行卷积操作。
